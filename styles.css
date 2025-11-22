@@ -510,34 +510,7 @@ h3 {
     margin: 0 auto;
 }
 
-.pdf-download {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
 
-.pdf-btn {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.pdf-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
-    text-decoration: none;
-    color: white;
-}
 
 .footer {
     background: #2c3e50;
@@ -548,9 +521,6 @@ h3 {
 }
 
 @media print {
-    .pdf-download {
-        display: none;
-    }
     .footer {
         display: none;
     }
