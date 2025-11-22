@@ -551,6 +551,9 @@ h3 {
     .pdf-download {
         display: none;
     }
+    .footer {
+        display: none;
+    }
 }
 
 @media print {
