@@ -78,6 +78,21 @@ body {
     gap: 15px;
 }
 
+.qr-dual-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .qr-code-main {
     width: 180px;
     height: 180px;
@@ -563,16 +578,101 @@ h3 {
     
     /* Hide browser headers and footers */
     @page {
-        margin: 0.5in;
+        margin: 0.75in;
         size: A4;
     }
     
     body {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        font-size: 12pt;
+        line-height: 1.4;
     }
     
-    /* Prevent page breaks inside sections */
+    .container {
+        box-shadow: none;
+        background: white !important;
+        min-height: auto !important;
+    }
+    
+    /* Hide footer completely */
+    .footer {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Remove any background colors that might show as blue */
+    body {
+        background: white !important;
+    }
+    
+    /* Header section - first page */
+    .header {
+        page-break-after: avoid;
+        margin-bottom: 15pt;
+        padding-bottom: 15pt;
+    }
+    
+    /* Contact section - same page as header */
+    .contact-section {
+        page-break-before: avoid;
+        page-break-after: auto;
+        margin-bottom: 20pt;
+    }
+    
+    /* Experience section - new page */
+    .experience-section {
+        page-break-before: always;
+        page-break-after: auto;
+        margin-bottom: 20pt;
+    }
+    
+    /* Tech section - same page if space, otherwise new page */
+    .tech-section {
+        page-break-before: auto;
+        page-break-after: auto;
+        margin-bottom: 20pt;
+    }
+    
+    /* Methodology section - same page if space */
+    .methodology-section {
+        page-break-before: auto;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 20pt;
+    }
+    
+    .methodology-grid {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    /* Education section - same page if space */
+    .education-section {
+        page-break-before: auto;
+        page-break-after: auto;
+        margin-bottom: 20pt;
+    }
+    
+    /* Certifications section - new page */
+    .certifications-section {
+        page-break-before: always;
+        page-break-after: auto;
+        margin-bottom: 20pt;
+    }
+    
+    /* QR section - same page if space, otherwise new page */
+    .qr-section-main {
+        page-break-before: auto;
+        text-align: center;
+        margin-top: 30pt;
+        margin-bottom: 20pt;
+    }
+    
+    /* Prevent page breaks inside items */
     .timeline-item,
     .tech-category,
     .methodology-item,
@@ -580,14 +680,37 @@ h3 {
     .cert-item {
         page-break-inside: avoid;
         break-inside: avoid;
+        margin-bottom: 10pt;
     }
     
-    /* Keep sections together when possible */
-    .contact-section,
-    .tech-section,
-    .methodology-section {
-        page-break-inside: avoid;
-        break-inside: avoid;
+    /* Adjust font sizes for print */
+    h1 { font-size: 22pt; }
+    h2 { font-size: 15pt; }
+    h3 { font-size: 13pt; margin-bottom: 10pt; }
+    h4 { font-size: 11pt; }
+    h5 { font-size: 10pt; }
+    
+    /* Adjust spacing */
+    .main-content {
+        padding: 0;
+    }
+    
+    section {
+        margin-bottom: 18pt;
+    }
+    
+    /* Reduce header padding */
+    .header {
+        padding: 25pt 30pt;
+    }
+    
+    /* Compact contact grid */
+    .contact-grid {
+        gap: 8pt;
+    }
+    
+    .contact-item {
+        padding: 8pt;
     }
 }
 

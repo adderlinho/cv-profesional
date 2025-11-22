@@ -1,0 +1,25 @@
+{
+  "name": "cv-profesional",
+  "version": "1.0.0",
+  "description": "Este es mi curriculum vitae en línea, diseñado para ser desplegado en GitHub Pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adderlinho/cv-profesional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adderlinho/cv-profesional/issues"
+  },
+  "homepage": "https://github.com/adderlinho/cv-profesional#readme",
+  "dependencies": {
+    "puppeteer": "^24.31.0",
+    "qrcode": "^1.5.4"
+  }
+}
